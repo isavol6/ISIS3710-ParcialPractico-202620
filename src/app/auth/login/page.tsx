@@ -36,7 +36,8 @@ export default function LoginPage() {
         onSubmit={handleSubmit}
         className="bg-white rounded-2xl shadow-lg p-8 mt-10 w-full max-w-md"
       >
-        <label className="block text-sm font-semibold text-slate-700">
+        <label className="block text-sm font-semibold text-slate-700"
+                aria-label="Correo electrónico">
           Correo electrónico
         </label>
         <input
@@ -49,7 +50,8 @@ export default function LoginPage() {
           className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 outline-none"
         />
 
-        <label className="block text-sm font-semibold text-slate-700 mt-4">
+        <label className="block text-sm font-semibold text-slate-700 mt-4"
+                aria-label="Contraseña">
           Contraseña
         </label>
         <input
@@ -60,6 +62,7 @@ export default function LoginPage() {
           onChange={(e) => setPassword(e.target.value)}
           required
           className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 outline-none"
+          
         />
 
         {error && <p className="text-sm text-red-600 mt-4">{error}</p>}
@@ -67,6 +70,8 @@ export default function LoginPage() {
         <button
           type="submit"
           className="w-full bg-blue-700 text-white font-semibold rounded-xl py-4 mt-8"
+          //añadir nombre accesible al boton
+          aria-label="Iniciar sesión"
         >
           Iniciar sesión
         </button>

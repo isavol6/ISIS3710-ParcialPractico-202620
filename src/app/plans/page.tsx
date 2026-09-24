@@ -14,6 +14,7 @@ export default async function PlansPage() {
             <img
               src={plan.image}
               className="w-full h-60 object-cover rounded-xl"
+              alt={`Imagen del plan ${plan.name}`}
             />
             <h4 className="text-2xl text-slate-900 mt-3">{plan.name}</h4>
             <p className="flex items-center text-sm text-slate-300">
